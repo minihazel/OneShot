@@ -1,0 +1,79 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <AssemblyName>OneShot</AssemblyName>
+    <Description>A simple instant-head-eyes protection mod</Description>
+    <Version>1.0.0</Version>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
+    <PackageReference Include="BepInEx.Core" Version="5.*" />
+    <PackageReference Include="BepInEx.PluginInfoProps" Version="1.*" />
+    <PackageReference Include="UnityEngine.Modules" Version="5.6.0" IncludeAssets="compile" />
+  </ItemGroup>
+  
+  <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\Desktop\RELEASE-SPT-3.7.4-26535\BepInEx\core\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="aki-core">
+      <HintPath>..\..\..\Desktop\RELEASE-SPT-3.7.4-26535\BepInEx\plugins\spt\aki-core.dll</HintPath>
+    </Reference>
+    <Reference Include="aki-custom">
+      <HintPath>..\..\..\Desktop\RELEASE-SPT-3.7.4-26535\BepInEx\plugins\spt\aki-custom.dll</HintPath>
+    </Reference>
+    <Reference Include="aki-debugging">
+      <HintPath>..\..\..\Desktop\RELEASE-SPT-3.7.4-26535\BepInEx\plugins\spt\aki-debugging.dll</HintPath>
+    </Reference>
+    <Reference Include="aki-singleplayer">
+      <HintPath>..\..\..\Desktop\RELEASE-SPT-3.7.4-26535\BepInEx\plugins\spt\aki-singleplayer.dll</HintPath>
+    </Reference>
+    <Reference Include="Aki.Build">
+      <HintPath>..\..\..\Desktop\RELEASE-SPT-3.7.4-26535\EscapeFromTarkov_Data\Managed\Aki.Build.dll</HintPath>
+    </Reference>
+    <Reference Include="Aki.Common">
+      <HintPath>..\..\..\Desktop\RELEASE-SPT-3.7.4-26535\EscapeFromTarkov_Data\Managed\Aki.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Aki.Reflection">
+      <HintPath>..\..\..\Desktop\RELEASE-SPT-3.7.4-26535\EscapeFromTarkov_Data\Managed\Aki.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\Battlestate Games\EFT\EscapeFromTarkov_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>..\..\..\Desktop\RELEASE-SPT-3.7.4-26535\BepInEx\core\BepInEx.dll</HintPath>
+    </Reference>
+    <Reference Include="bsg.console.core">
+      <HintPath>..\..\..\..\..\Battlestate Games\EFT\EscapeFromTarkov_Data\Managed\bsg.console.core.dll</HintPath>
+    </Reference>
+    <Reference Include="Comfort">
+      <HintPath>..\..\..\..\..\Battlestate Games\EFT\EscapeFromTarkov_Data\Managed\Comfort.dll</HintPath>
+    </Reference>
+    <Reference Include="Comfort.Unity">
+      <HintPath>..\..\..\..\..\Battlestate Games\EFT\EscapeFromTarkov_Data\Managed\Comfort.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="ConfigurationManager">
+      <HintPath>..\..\..\Desktop\RELEASE-SPT-3.7.4-26535\BepInEx\plugins\spt\ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\..\Battlestate Games\EFT\EscapeFromTarkov_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\..\Battlestate Games\EFT\EscapeFromTarkov_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\..\Battlestate Games\EFT\EscapeFromTarkov_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\..\..\Battlestate Games\EFT\EscapeFromTarkov_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
